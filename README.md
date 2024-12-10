@@ -13,7 +13,7 @@ Welcome to the **My To-Do App** built with the **PERN stack** (PostgreSQL, Expre
 
 📷 **Screenshot**
 
-![Screenshot](./public/todo-app-screenshot.png)
+![Screenshot](frontend/public/photos/readme.jpg)
 
 🛠️ **Technologies Used**
 - **React.js**: Frontend framework for building the user interface.
