@@ -1,0 +1,145 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('/public/photos/geode.jpeg'); /* Update image path if necessary */
+    background-size: cover; /* Make the image cover the entire background */
+    background-position: center center; /* Center the image */
+    background-attachment: fixed; /* Keep background static during scrolling */
+    text-align: center;
+    color: #e6dbd3; /* Neutral light text color */
+}
+
+/* Title Styling */
+h1 {
+    font-size: 3em;
+    margin: 20px;
+    color: #e6dbd3; /* Light neutral text */
+}
+
+/* Form Styling */
+#todo-form {
+    margin: 20px auto;
+}
+
+/* Input Styling */
+#todo-input {
+    padding: 15px;
+    font-size: 1.4em;
+    border: 2px solid rgba(0, 0, 0, 0.6); /* Subtle border closer to black */
+    background-color: rgba(0, 0, 0, 0.6); /* Translucent dark background */
+    color: #e6dbd3; /* Light text */
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Button Styling */
+button {
+    padding: 15px 20px;
+    font-size: 1.4em; /* Increased font size */
+    background-color: rgba(0, 0, 0, 0.6); /* Translucent dark background */
+    color: #e6dbd3; /* Light text */
+    border: 2px solid rgba(0, 0, 0, 0.6); /* Subtle border closer to black */
+    border-radius: 10px; /* Rounded corners */
+    width: 80%;
+    max-width: 400px;
+    cursor: pointer;
+    display: block; /* Make buttons span full width */
+    margin: 10px auto; /* Add spacing between buttons */
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly darker translucent background */
+}
+
+/* Todo List Styling */
+#todo-list {
+    padding: 0;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Todo Item Styling */
+#todo-list li {
+    background-color: rgba(0, 0, 0, 0.6); /* Translucent dark background */
+    padding: 20px;
+    margin: 10px 0;
+    border: 2px solid rgba(0, 0, 0, 0.6); /* Subtle border closer to black */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1.4em; /* Match todo text with button size */
+    color: #e6dbd3; /* Light text */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start;
+    align-items: flex-start; /* Align text and buttons to the left */
+    animation: pop 0.5s ease; /* Subtle entry animation */
+}
+
+/* Task Text Styling */
+#todo-list li .task-text {
+    margin-bottom: 10px;
+    width: 100%; /* Ensure the task text takes full width */
+    font-size: 1.4em; /* Match the button font size */
+}
+
+/* Buttons Styling Inside Todo Items */
+#todo-list li .action-buttons {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 10px; /* Add spacing between buttons */
+    width: 100%; /* Ensure buttons are aligned with task text */
+}
+
+#todo-list li .action-buttons button {
+    width: auto; /* Keep buttons smaller to fit side-by-side */
+    max-width: none; /* Remove the width restriction */
+    flex: 1; /* Allow buttons to grow evenly */
+}
+
+/* Modal Styling */
+#edit-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Dark translucent modal */
+    color: #e6dbd3;
+    padding: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    border-radius: 10px; /* Rounded corners */
+    width: 300px;
+    box-shadow: none;
+}
+
+/* Edit Modal Buttons */
+#save-edit, #cancel-edit {
+    padding: 15px 20px;
+    font-size: 1.4em;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #e6dbd3;
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    border-radius: 10px; /* Rounded corners */
+    width: 80%;
+    max-width: 400px;
+    cursor: pointer;
+    display: block; /* Full-width buttons */
+    margin: 10px auto;
+}
+
+#save-edit:hover, #cancel-edit:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Subtle Animations */
+@keyframes pop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
